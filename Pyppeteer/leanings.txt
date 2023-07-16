@@ -1,0 +1,9 @@
+Problems faced while Integrating flask and pyppeteer:
+* raise RuntimeError('There is no current event loop in thread %r.’)
+    * We can’t initialise asyncio.get_event_loop() after starting the flask app, as the app.run() returns the flask development server
+* signal only works in main thread of the main interpreter
+    * Due to the interaction between Pyppeteer's usage of signals and the threading model of Flask.  Flask, by default, runs in a multi-threaded environment to handle multiple requests concurrently, which can interfere with the signal handling.
+Solution:
+	Disable the signal handling in the pyppeteer -> await launch(handleSIGINT=False,handleSIGTERM=False,handleSIGHUP=False)
+
+Pyppeteer’s CSSCoverage is unable to extract the user agent stylesheet styles(pre-defined browser styles)

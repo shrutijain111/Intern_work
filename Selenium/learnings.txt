@@ -1,0 +1,5 @@
+Computed styles => returns the computed value of the property, suppose width is 100% in actual css styling then computed style would return the actual rendered width in px
+
+getComputedStyle taakes two parameters, one is the element and second is the pseudoelement(::after,::before)
+:hover, :visited or other similar effects are pseuodo-classes.They won't create new elements but apply specialized class styles to the element, these elements can't be accessed using the getComputedStyle
+

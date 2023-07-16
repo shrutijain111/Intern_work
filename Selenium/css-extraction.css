@@ -1,0 +1,15 @@
+._ab1y {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px
+}
+
+._ab1y {
+    justify-content: space-between;
+    margin-top: 0;
+    max-width: 100%
+}
